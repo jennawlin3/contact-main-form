@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <title>Frontend Mentor | Contact form</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+<main class="main-container">
+  <div id="pop-up" class="pop-up">
+    <span><img src="assets/images/icon-success-check.svg"></span><h2>Message Sent!</h2>
+    <p>Thanks for completing the form. We'll be in touch soon!</p>
+  </div>
+  <section class="form-container">
+    <h1>Contact Us</h1>
+    <form id="form" method="post" action="#">
+      <div class="fn-container">
+        <label for="fn-input">First Name</label><span>*</span><br>
+        <input type="text" name="first-name" id="fn-input" class="data border">
+        <div class="error" id="fn-error">This field is required</div>
+      </div>
+      <div class="ln-container">
+        <label for="ln-input">Last Name</label><span>*</span><br>
+        <input type="text" name="last-name" id="ln-input" class="data border">
+        <div class="error" id="ln-error">This field is required</div>
+      </div>
+      <div class="email-container">
+        <label>Email Address</label><span>*</span><br>
+        <input type="email" name="email" id="email-input" class="data border">
+        <div class="error" id="email-error">Please enter a valid email address</div>
+      </div>
+      <div class="radio-container">
+        <label>Query Type<span>*</span></label><br>
+        <div class="option-radio one data border">
+            <input type="radio" name="query-type" id="option-one" value="general-enquiry"><label>General Enquiry</label>
+        </div>
+        <div class="option-radio two data border">
+            <input type="radio" name="query-type" id="option-two" value="support-request"><label>Support Request</label>
+        </div>
+        <div class="error" id="radio-error">Please select a query type</div>
+      </div>
+      <div class="comment-container">
+        <label>Message</label><span>*</span><br>
+        <textarea class="comment data border" id="comment"></textarea>
+        <div class="error" id="comment-error" >This field is required</div>
+      </div>
+      <div class="consent">
+        <input type="checkbox" name="consent" id="consent" class="data"><label>I consent to being contacted by the team<span>*</span></span></label><br>
+        <div class="error" id="consent-error">To submit this form, please consent to being contacted</div>
+      </div>
+    <input type="submit" value="Submit" id="submit" class="border">    
+    </form>
+  </section>
+</main>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="https://app.netlify.com/teams/jennawlin3/sites">Jenn Acosta</a>.
+  </div>
+  <script src="app/app.js"></script>
+</body>
+</html>
